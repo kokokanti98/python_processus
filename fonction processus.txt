@@ -1,0 +1,29 @@
+def process_work(process_number,p_time,fichier,nombre_multiplie):
+    print ("Process " + str(process_number) + " starting.\n\tPID : " + str(os.getpid()) + " PPID : " + str(os.getppid()))
+    for idx in range (5):
+        print(str(os.getpid()) + " Working for then sleep for",p_time) 
+        nombre_multiplie = nombre_multiplie+1;
+        time.sleep(p_time)
+    if(process_number==1 or process_number==0):
+        fichier.suppr_ecriture_fichier("Nombre final dans Process %d est %d" %(process_number,nombre_multiplie))
+    else:
+        fichier.ecrire_a_la_ligne_fichier("Nombre final dans Process %d est %d" %(process_number,nombre_multiplie))
+    print ("Process ",process_number,"finished.")
+    #return os.getpid()
+
+///////////
+
+
+   #process_pool = multiprocessing.Pool()
+# One process run ///# Question 1 Partie 2
+   #process_pool.apply(process_work, [1]) 
+
+# 8 processus synchronous 
+   #nb_process = int(input("Combien de processus voulez vous creer: "))
+   #process_pool.starmap(process_work, [(1, 0.1,mon_fichier,3), (2, 0.3,mon_fichier,2), (3, 0.2,mon_fichier,5)]) 
+   #process_pool.map(process_work, range(nb_process))
+   #process_pool.close()
+
+
+////////////
+

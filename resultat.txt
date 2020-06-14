@@ -1,0 +1,2 @@
+Nombre final dans Process 1 est 7
+Nombre final dans Process 4 est 10
